@@ -1,0 +1,13 @@
+{
+  "name": "claude-sessions",
+  "version": "0.1.0",
+  "description": "Mac에서 실행 중인 모든 Claude Code 세션(터미널, Claude Desktop, IDE, ACP)을 한눈에 보는 TUI 대시보드",
+  "type": "module",
+  "bin": {
+    "claude-sessions": "bin/claude-sessions.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,25 @@
+class ClaudeSessions < Formula
+  desc "TUI dashboard showing every Claude Code session on your Mac"
+  homepage "https://github.com/{{USER}}/claude-sessions"
+  version "{{VERSION}}"
+  license "MIT"
+
+  on_macos do
+    on_arm do
+      url "https://github.com/{{USER}}/claude-sessions/releases/download/v{{VERSION}}/claude-sessions-{{VERSION}}-darwin-arm64.tar.gz"
+      sha256 "{{SHA_ARM}}"
+    end
+    on_intel do
+      url "https://github.com/{{USER}}/claude-sessions/releases/download/v{{VERSION}}/claude-sessions-{{VERSION}}-darwin-x64.tar.gz"
+      sha256 "{{SHA_X64}}"
+    end
+  end
+
+  def install
+    bin.install "claude-sessions"
+  end
+
+  test do
+    system bin/"claude-sessions", "--json"
+  end
+end
